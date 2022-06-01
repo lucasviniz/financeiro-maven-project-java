@@ -15,9 +15,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
 @Entity
 @Table(name = "lancamento")
-public class Lancamento {
+public class Lancamento{	
+		
 	private Long id;
 	private Pessoa pessoa;
 	private String descricao;
@@ -36,7 +38,6 @@ public class Lancamento {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "pessoa_id")
